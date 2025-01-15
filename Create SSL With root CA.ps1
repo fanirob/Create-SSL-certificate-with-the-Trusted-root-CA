@@ -2,9 +2,9 @@
 # This script creates an SSL certificate and imports it into the appropriate certificate stores.
 
 # Variables
-$CN = "HimuAiDev"
-$IssuedTo = "FA-Nirob"
-$Password = "Firuj@shd0003!"
+$CN = "HimuAi"
+$IssuedTo = "Localhost-"
+$Password = ""
 $OutputPath = "A:\Codes\Test_Codes\"
 
 # Ensure the output directory exists
@@ -66,7 +66,7 @@ $fileToSign = "A:\Codes\Test_Codes\test.exe"
 $certificatePath = "A:\Codes\Test_Codes\HimuAiDev.pfx"
 
 # Certificate password
-$certificatePassword = "Firuj@shd0003!"
+$certificatePassword = ""
 
 # Sign the file
 & $signtoolPath sign /f $certificatePath /p $certificatePassword /fd SHA256 /tr http://timestamp.digicert.com /td SHA256 $fileToSign
